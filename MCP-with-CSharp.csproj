@@ -13,5 +13,11 @@
     <PackageReference Include="ModelContextProtocol" Version="0.3.0-preview.4" />
     <PackageReference Include="System.Text.Json" Version="9.0.8" />
   </ItemGroup>
-
+  <PropertyGroup>
+    <!-- The following properties are optional and can be used to enable container support for the SDK. -->
+     <!-- <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+     <ContainerRepository>jamesmontemagno/monkeymcp2</ContainerRepository>
+     <ContainerFamily>alpine</ContainerFamily>
+     <RuntimeIdentifier>linux-x64;linux-arm64</RuntimeIdentifier> -->
+  </PropertyGroup>
 </Project>
