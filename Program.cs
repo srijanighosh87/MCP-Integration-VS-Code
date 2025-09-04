@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MCP_with_CSharp.Services;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ModelContextProtocol.Server;
@@ -13,15 +14,15 @@ builder.Logging.AddConsole(consoleLogOptions =>
 builder.Services
     .AddMcpServer() // adds MCP server support
     .WithStdioServerTransport()
-    .WithToolsFromAssembly() // automatically registers all tools in the current assembly
-    ;
+    .WithToolsFromAssembly(); // automatically registers all tools in the current assembly
 
+builder.Services.AddSingleton<MonkeyService>();
 await builder.Build().RunAsync();
 
 [McpServerToolType]
 public static class EchoTool
 {
-    // This method is automatically registered as an MCP tool 
+    // These methods are automatically registered as an MCP tool 
     // because of the McpServerToolType attribute on the class
     // and the McpServerTool attribute on the method.
 
