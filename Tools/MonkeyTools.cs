@@ -16,7 +16,7 @@ public class MonkeyTools
     /// Monkey Service
     /// </summary>
     /// <param name="monkeyService"><see cref="MonkeyService"/> to be used for tools.</param>
-    [McpServerTool, Description("Get all monkeys.")]
+    [McpServerTool, Description("Get all monkeys")]
     public static async Task<string> GetMonkeyList(MonkeyService monkeyService)
     {
         var monkeys = await monkeyService.GetMonkeys();
@@ -31,7 +31,7 @@ public class MonkeyTools
     /// Get a monkey by name 
     /// </summary>
     /// <param name="name">Name of the monkey to be fetched.</param>
-    [McpServerTool, Description("Get a monkey by name.")]
+    [McpServerTool, Description("Get monkey by name")]
     public static async Task<string> GetMonkeyByName(string name, MonkeyService monkeyService)
     {
         var monkey = await monkeyService.GetMonkey(name);
