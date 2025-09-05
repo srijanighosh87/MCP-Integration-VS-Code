@@ -51,3 +51,7 @@ To implement the MCP server, the following nuget packages are used:
 	},
 	  "inputs": []
 }
+
+## Confluence space used for this test project
+https://srijanighosh87.atlassian.net/wiki/spaces
+
