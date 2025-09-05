@@ -15,7 +15,7 @@ This is a .NET 9.0 project for working with monkeys using Model Context Protocol
 - `MCP-with-CSharp.csproj`: Project configuration file.
 - `MCP-with-CSharp.sln`: Solution file.
 - `bin/` and `obj/`: Build output and intermediate files.
- - `.vscode/mcp.json`: MCP configuration file for the project.
+ - `.vscode/mcp.json`: MCP configuration file for the project. (git ignored)
 
 ## Requirements
 
@@ -29,3 +29,25 @@ To implement the MCP server, the following nuget packages are used:
 - `ModelContextProtocol`
 - `Microsoft.Extensions.Hosting`
 - `System.Text.Json`
+
+## Contents of mcp.json (.vscode folder is usually in gitignore)
+{
+	"servers": {
+		// MCP server support for local projects using C#
+		"mcp-csharp": {
+			"type": "stdio",
+			"command": "dotnet",
+			"args": [
+                "run",
+                "--project",
+                "D:\\Git Repos\\MCP-with-CSharp\\MCP-with-CSharp.csproj"
+            ]
+		},
+		// Added MCP server support for confluence
+		"atlassian-mcp-server": {
+			"url": "https://mcp.atlassian.com/v1/sse",
+			"type": "http"
+    	}
+	},
+	  "inputs": []
+}
