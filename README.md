@@ -1,6 +1,5 @@
-# MCP-with-CSharp
-
-This is a .NET 9.0 project for working with monkeys using Model Context Protocol.
+# MCP integration with Visual studio code
+This is a .NET 9.0 project for working with Model Context Protocol.
 
 ## Features
 
@@ -16,13 +15,14 @@ This is a .NET 9.0 project for working with monkeys using Model Context Protocol
 - `MCP-with-CSharp.sln`: Solution file.
 - `bin/` and `obj/`: Build output and intermediate files.
  - `.vscode/mcp.json`: MCP configuration file for the project. (git ignored)
+ -  `.github/copilot-instructions.md`: Markdown file for Co-pilot.
 
-## Requirements
+## Decription
 
-This project is a demo for the MCP (Model Context Protocol) model context protocol. It demonstrates how to use MCP server to interact with a remote service that provides information as JSON.
-
-## MCP Model Context Protocol
-The project uses MCP to query a remote service and retrieve monkey data in JSON format. This showcases how MCP can be used for model-driven APIs and remote data access.
+This project is a demo for the MCP (Model Context Protocol).
+- It demonstrates how to use MCP server to interact with a remote service.
+- Also includes a demo to connect with Atlassian MCP server.
+- Demo Copilot-instructions.md file.
 
 ## Required Libraries for MCP Server
 To implement the MCP server, the following nuget packages are used:
@@ -31,6 +31,8 @@ To implement the MCP server, the following nuget packages are used:
 - `System.Text.Json`
 
 ## Contents of mcp.json (.vscode folder is usually in gitignore)
+
+```json
 {
 	"servers": {
 		// MCP server support for local projects using C#
@@ -51,6 +53,7 @@ To implement the MCP server, the following nuget packages are used:
 	},
 	  "inputs": []
 }
+```
 
 ## Confluence space used for this test project
 https://srijanighosh87.atlassian.net/wiki/spaces
