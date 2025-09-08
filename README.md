@@ -58,3 +58,6 @@ To implement the MCP server, the following nuget packages are used:
 ## Confluence space used for this test project
 https://srijanighosh87.atlassian.net/wiki/spaces
 
+## MCP servers which can be used for integration can be found here
+https://github.com/modelcontextprotocol/servers
+
